@@ -118,7 +118,7 @@ function destroyErrorOverlay() {
     lastOnOverlayDivReady = null;
 }
 
-const ws = new WebSocket('ws://localhost:8081');
+const ws = new WebSocket(process.env.WEBPACK_SERVE_OVERLAY_WS_URL || 'ws://localhost:8081');
 
 ws.addEventListener('message', message => {
     const data = JSON.parse(message.data);
