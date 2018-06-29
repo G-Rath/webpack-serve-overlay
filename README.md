@@ -24,10 +24,10 @@ overlay: require.resolve('webpack-serve-overlay')
 
 and you'll be away laughing.
 
+## Configuration
 
-## Problems
+The overlay works by using a WebSocket that connects to `ws://localhost:8081` by default.
 
-Tons.
+This value can be overridden by setting the `WEBPACK_SERVE_OVERLAY_WS_URL` env property.
 
-This overlay currently is hardcoded to try to connect to `ws://localhost:8081`.
-That's absolutely the first thing I'm going to fix, but for now it works for me.
+I aim to replace later add functionality to get this (and similar) values from `webpack-serve` itself.
