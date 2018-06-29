@@ -33,8 +33,9 @@ console.log(`moving [Unreleased] header in CHANGELOG.md to be ${packageJson.vers
 moveChangelogUnreleasedHeaderForVersion(packageJson.version, filePaths.CHANGELOG);
 // endregion
 // region update CHANGELOG.md version header links
-console.log(`updating tag links in CHANGELOG.md...`);
-updateChangelogTagLinksForNewVersion(packageJson.version, packageJson.repository.url, filePaths.CHANGELOG);
+packageJson.repository
+    ? console.log(`updating tag links in CHANGELOG.md...`) || updateChangelogTagLinksForNewVersion(packageJson.version, packageJson.repository.url, filePaths.CHANGELOG)
+    : console.log('skipping changelog links since there\'s no repository...');
 // endregion
 
 console.log();
