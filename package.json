@@ -1,6 +1,6 @@
 {
     "name": "webpack-serve-overlay",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Error overlay for webpack-serve",
     "homepage": "https://github.com/g-rath/webpack-serve-overlay#readme",
     "bugs": {
@@ -21,5 +21,5 @@
         "ansi-html": "0.0.7",
         "html-entities": "^1.2.1"
     },
-    "devDependencies": { }
+    "devDependencies": {}
 }
