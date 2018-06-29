@@ -4,6 +4,7 @@
     "description": "Error overlay for webpack-serve",
     "license": "ISC",
     "author": "Gareth Jones",
+    "main": "errorOverlay.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "version": "node ./scripts/npm-version.js"
