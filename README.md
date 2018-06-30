@@ -16,7 +16,7 @@ Install the package:
 npm i webpack-serve-overlay
 ```
 
-Then import the overlay at the top of your `index.jsx` (or equivalent):
+Then require the overlay at the top of your `index.jsx` (or equivalent):
 
 ```javascript
 // becomes dead code in builds other than dev,
@@ -34,4 +34,4 @@ The overlay works by using a WebSocket that connects to `ws://localhost:8081` by
 
 This value can be overridden by setting the `WEBPACK_SERVE_OVERLAY_WS_URL` env property.
 
-I aim to replace later add functionality to get this (and similar) values from `webpack-serve` itself.
+I aim to later add functionality to get this (and similar) values from `webpack-serve` itself.
