@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+This bug fix release doesn't actually change any code.
+Instead it changes the insertion method recommended by the `README.md`
+as it was discovered the overlay prevents hot-reload from refreshing the page
+if it's included as an entry.
+
+See issue #5 for more information.  
+
 ## [0.2.0] - 2018-06-30
 
 ### Added
