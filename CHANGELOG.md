@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+`README.md` adjustments & `npm unpublish` re-publish.
+
 ## [0.2.1] - 2018-06-30
 
 This bug fix release doesn't actually change any code.
