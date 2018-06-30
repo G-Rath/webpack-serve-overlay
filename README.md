@@ -22,7 +22,7 @@ Then import the overlay at the top of your `index.jsx` (or equivalent):
 // becomes dead code in builds other than dev,
 // which webpack should pick up and remove.
 if(process.env.NODE_ENV === 'development') {
-    import 'webpack-serve-overlay';
+    require('webpack-serve-overlay');
 }
 ```
 
