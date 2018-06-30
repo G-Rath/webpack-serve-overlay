@@ -16,10 +16,14 @@ Install the package:
 npm i webpack-serve-overlay
 ```
 
-Then add the following entry to the `entry` object in your webpack config:
+Then import the overlay at the top of your `index.jsx` (or equivalent):
 
-```
-overlay: require.resolve('webpack-serve-overlay')
+```javascript
+// becomes dead code in builds other than dev,
+// which webpack should pick up and remove.
+if(process.env.NODE_ENV === 'development') {
+    import 'webpack-serve-overlay';
+}
 ```
 
 and you'll be away laughing.
