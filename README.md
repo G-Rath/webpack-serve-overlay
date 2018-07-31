@@ -27,7 +27,7 @@ and you'll be away laughing.
 
 ## Configuration
 
-The overlay works by using a WebSocket that connects to `webpack-serve` à la `webpack-hot-client`. 
+The overlay works by using a WebSocket that connects to `webpack-serve` à la `webpack-hot-client`.  
 This means that it *shouldn't* require any extra settings or configuration.
 
 However, just in case, you can manually specify the WebSocket url by setting the `WEBPACK_SERVE_OVERLAY_WS_URL` env property.
