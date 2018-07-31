@@ -2,10 +2,7 @@
 
 A rudimentary overlay for [`webpack-serve`](https://github.com/webpack-contrib/webpack-serve), based off the one used in `webpack-dev-server`.
 
-This overlay is currently in development. It's fully working, 
-but has none of the clever automagical features like inserting itself into `webpack.entry`.
-
-These features (and more) should hopefully come with time. Right now this package serves as a quick fully functional way of 
+This package is targeted at serves as a quick fully functional way of 
 being able to have the same overlay as `webpack-dev-server` in `webpack-serve` with minimal fuss & expense.
 
 ## Usage
@@ -30,8 +27,7 @@ and you'll be away laughing.
 
 ## Configuration
 
-The overlay works by using a WebSocket that connects to `ws://localhost:8081` by default.
+The overlay works by using a WebSocket that connects to `webpack-serve` à la `webpack-hot-client`. 
+This means that it *shouldn't* require any extra settings or configuration.
 
-This value can be overridden by setting the `WEBPACK_SERVE_OVERLAY_WS_URL` env property.
-
-I aim to later add functionality to get this (and similar) values from `webpack-serve` itself.
+However, just in case, you can manually specify the WebSocket url by setting the `WEBPACK_SERVE_OVERLAY_WS_URL` env property.
