@@ -118,7 +118,21 @@ function destroyErrorOverlay() {
     lastOnOverlayDivReady = null;
 }
 
-const ws = new WebSocket(process.env.WEBPACK_SERVE_OVERLAY_WS_URL || 'ws://localhost:8081');
+const url = require('url');
+
+// this is piped in at runtime build via DefinePlugin in /lib/plugins.js
+// taken from https://github.com/webpack-contrib/webpack-hot-client/blob/master/lib/client/index.js#L14
+const options = __hotClientOptions__;
+
+const { host } = options.webSocket;
+const socketUrl = url.format({
+    protocol: options.https ? 'wss' : 'ws',
+    hostname: host === '*' ? window.location.hostname : host,
+    port: options.webSocket.port,
+    slashes: true,
+});
+
+const ws = new WebSocket(process.env.WEBPACK_SERVE_OVERLAY_WS_URL || socketUrl);
 
 ws.addEventListener('message', message => {
     const data = JSON.parse(message.data);
