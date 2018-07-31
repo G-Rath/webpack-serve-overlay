@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.0] - 2018-08-01
+
 Implemented usage of `__hotClientOptions__` in the same manner as `webpack-hot-client`,
 making this package pretty much feature-complete, as it now works in nearly the same as
 the old overlay. v1 will likely be released soon after, with no expected changes.
@@ -37,8 +39,9 @@ See issue [#5] for more information.
 ### Added
  - Initial commit
 
-[Unreleased]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.2.2...HEAD
+[Unreleased]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.3.0...HEAD
 
+[0.3.0]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.2.2...v0.3.0
 [0.2.2]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/g-rath/webpack-serve-overlay/compare/v0.1.0...v0.2.0
