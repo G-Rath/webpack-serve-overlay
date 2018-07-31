@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+Implemented usage of `__hotClientOptions__` in the same manner as `webpack-hot-client`,
+making this package pretty much feature-complete, as it now works in nearly the same as
+the old overlay. v1 will likely be released soon after, with no expected changes.
+
+### Changed
+ - The `errorOverlay` now uses `__hotClientOptions__` in the same manner as `webpack-hot-client` to get
+ the WebSocket url to connect to `webpack-serve`.
+
 ## [0.2.2] - 2018-06-30
 
 `README.md` adjustments & `npm unpublish` re-publish.
