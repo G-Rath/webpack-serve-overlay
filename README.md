@@ -16,7 +16,10 @@ npm i webpack-serve-overlay
 Then add the following entry to the [`entry` object](https://webpack.js.org/configuration/entry-context/#entry) in your webpack config:
 
 ```javascript
-overlay: 'webpack-serve-overlay/onlyIfDevelopment'
+entry: {
+  ...
+  overlay: 'webpack-serve-overlay/onlyIfDevelopment'
+}
 ```
 
 and you'll be away laughing.
