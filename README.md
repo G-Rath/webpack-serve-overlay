@@ -21,6 +21,8 @@ overlay: 'webpack-serve-overlay/onlyIfDevelopment'
 
 and you'll be away laughing.
 
+_NOTE: If you are using the default `webpack-hot-client` options, you will want to make sure that this is **not** your first entry. [More info](https://github.com/webpack-contrib/webpack-serve/issues/119#issuecomment-401502247)_  
+
 For a more custom installation, you can alternatively require the overlay at the top of your `index.jsx` (or equivalent):
 
 ```javascript
