@@ -13,7 +13,20 @@ Install the package:
 npm i webpack-serve-overlay
 ```
 
-Then require the overlay at the top of your `index.jsx` (or equivalent):
+Then add the following entry to the [`entry` object](https://webpack.js.org/configuration/entry-context/#entry) in your webpack config:
+
+```javascript
+entry: {
+  ...
+  overlay: 'webpack-serve-overlay/onlyIfDevelopment'
+}
+```
+
+and you'll be away laughing.
+
+_NOTE: If you are using the default `webpack-hot-client` options, you will want to make sure that this is **not** your first entry. [More info](https://github.com/webpack-contrib/webpack-serve/issues/119#issuecomment-401502247)_  
+
+For a more custom installation, you can alternatively require the overlay at the top of your `index.jsx` (or equivalent):
 
 ```javascript
 // becomes dead code in builds other than dev,
@@ -23,7 +36,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 ```
 
-and you'll be away laughing.
+
 
 ## Configuration
 
